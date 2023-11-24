@@ -1,4 +1,4 @@
-USE hackatruite;
+
 CREATE TABLE hackatruite (
   id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   liste VARCHAR(255)

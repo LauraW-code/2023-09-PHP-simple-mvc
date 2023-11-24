@@ -20,4 +20,5 @@ return [
     'connexion' => ['HomeController', 'login',],
     'logout' => ['HomeController', 'logout',],
     'admin' => ['HomeController', 'indexAdmin',],
+    'admin/delete' => ['HomeController', 'delete', ['id'],],
 ];

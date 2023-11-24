@@ -30,4 +30,18 @@ class ConnexionManager extends AbstractManager
         return (int)$this->pdo->lastInsertId();
         //return $statement->execute();
     }
+
+    public function selectAllListe()
+    {
+        $query = 'SELECT * FROM hackatruite';
+        return $this->pdo->query($query)->fetchAll();
+    }
+
+    public function deleteListe(int $id): void
+    {
+        // prepared request
+        $statement = $this->pdo->prepare("DELETE FROM hackatruite WHERE id=:id");
+        $statement->bindValue('id', $id, \PDO::PARAM_INT);
+        $statement->execute();
+    }
 }

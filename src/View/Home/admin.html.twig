@@ -1,2 +1,45 @@
 {% extends 'layout.html.twig' %}
 
+{% block content %}
+{% if session.isLogin == true %}
+
+<div>
+        <h1 class="uk-heading-small uk-text-center h1-goddies"><span class="title-goddies">Listes reçues</span></h1>
+    </div>
+
+<div uk-grid class="lw-maindiv-admin">
+    <div>
+    <div class="uk-card uk-card-default uk-card-body lw-admincard-body">
+    
+    
+    <table class="uk-table uk-table-divider">
+<thead>
+        <tr>
+            <th>Liste</th>   
+        </tr>
+    </thead>
+    <tbody>
+        {% for liste in listes %}
+        <tr>
+            <td><img class="upload-img-admin" src="/upload/{{liste.liste}}"</td>
+            
+            <td>
+                <a href="/admin/delete?id={{ liste.id }}" uk-icon="icon: trash"></a>
+            </td>
+        </tr>
+        {% else %}
+        <tr>
+            <td colspan='8'>Pas de données</td>
+        </tr>
+        {% endfor %} 
+    </tbody>
+</table>
+    </div>
+    </div>
+    </div>
+
+    {% else %}
+        <h4 style="color: red;">Veuillez vous connecter avec votre compte Admin pour effectuer des modifications."</h4>
+    {% endif %}
+
+{% endblock %}

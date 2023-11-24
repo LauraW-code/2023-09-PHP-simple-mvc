@@ -62,7 +62,9 @@ class HomeController extends AbstractController
 
     public function indexAdmin(): string
     {
-        return $this->twig->render('Home/admin.html.twig');
+        $listeManager = new ConnexionManager();
+        $listes = $listeManager->selectAllListe();
+        return $this->twig->render('Home/admin.html.twig', ['listes' => $listes]);
     }
 
     public function login()
@@ -104,5 +106,12 @@ class HomeController extends AbstractController
         unset($_SESSION['username']);
         unset($_SESSION['password']);
         header('Location: /connexion');
+    }
+
+    public function delete(int $id)
+    {
+        $listeManager = new ConnexionManager();
+        $listeManager->deleteListe($id);
+        header('Location: /admin');
     }
 }

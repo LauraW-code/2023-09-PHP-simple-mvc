@@ -1,0 +1,14 @@
+.upload-img-admin {
+    max-height: 200px;
+}
+
+.lw-maindiv-admin {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 7rem !important;
+}
+
+.lw-admincard-body {
+    border-radius: 20px;
+    
+}
