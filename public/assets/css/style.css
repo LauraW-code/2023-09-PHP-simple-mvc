@@ -1,3 +1,9 @@
-body {
-    color: #f76c6c;
-}
+@import url(_variables.css);
+@import url(_global.css);
+@import url(_goddies.css);
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Roboto&display=swap');
+@import url(_cadeaux.css);
+@import url(_navbar.css);
+@import url(_footer.css);
+@import url(_visite.css);
+@import url(_acceuil.css);

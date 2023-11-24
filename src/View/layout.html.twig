@@ -4,7 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="/assets/images/favicon.png">
+    <link href="/assets/css/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/css/uikit.min.css" />
+    
 
     <title>{% block title %}{% endblock %}</title>
 
@@ -13,8 +15,15 @@
 </head>
 
 <body>
+
+    {% include '/Layout/navbar.html.twig' %}
+
     {% block content %}{% endblock %}
     {% block javascript %}{% endblock %}
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/uikit@3.17.11/dist/js/uikit-icons.min.js"></script>
+
+    {% include '/Layout/footer.html.twig' %}
 </body>
 </html>
 
