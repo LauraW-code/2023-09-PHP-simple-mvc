@@ -177,14 +177,74 @@ input::file-selector-button {
     height: 100vh;
     width: 100vw;
   }
-  
-  .cadeau {
+.cadeau {
     position: absolute;
     width: 50px;
     animation: chute 5s linear infinite;
+    z-index: 900;
   }
+.cadeau1 {
+    top:100px;
+    right:5%;
+    animation: chute 3s linear infinite;
+    z-index: 900;
+  }
+.cadeau2 {
+    top:85px;
+    right:20%;
+    animation: chute 6s linear infinite;
+    z-index: 900;
+}
+.cadeau3 {
+    top:45px;
+    right:40%;
+    animation: chute 2s linear infinite;
+    z-index: 900;
+  }
+.cadeau4 {
+    top:85px;
+    right:60%;
+    animation: chute 8s linear infinite;
+    z-index: 900;
+}
+.cadeau5 {
+    top:100px;
+    right:50%;
+    animation: chute 7s linear infinite;
+    z-index: 900;
+  }
+.cadeau6 {
+    top:85px;
+    right:90%;
+    animation: chute 5s linear infinite;
+    z-index: 900;
+}
+.cadeau7 {
+    top:100px;
+    right:70%;
+    animation: chute 8s linear infinite;
+    z-index: 900;
+  }
+.cadeau8 {
+    top:85px;
+    right:30%;
+    animation: chute 6s linear infinite;
+    z-index: 900;
+}
+.cadeau9 {
+    top:100px;
+    right:80%;
+    animation: chute 4s linear infinite;
+    z-index: 900;
+  }
+.cadeau10 {
+    top:85px;
+    right:5%;
+    animation: chute 9s linear infinite;
+    z-index: 900;
+}
   
-  @keyframes chute {
+@keyframes chute {
     0% {
       transform: translateY(-100%);
     }

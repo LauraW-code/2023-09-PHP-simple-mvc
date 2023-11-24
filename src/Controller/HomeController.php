@@ -7,11 +7,6 @@ class HomeController extends AbstractController
     /**
      * Display home page
      */
-    public function indexCadeaux(): string
-    {
-        return $this->twig->render('Home/main_cadeaux.html.twig');
-    }
-
     public function indexGoddies(): string
     {
         return $this->twig->render('Home/main_goddies.html.twig');
@@ -25,5 +20,10 @@ class HomeController extends AbstractController
     public function indexAccueil(): string
     {
         return $this->twig->render('Home/main_accueil.html.twig');
+    }
+
+    public function indexCadeaux(): string
+    {
+        return $this->twig->render('Home/main_cadeaux.html.twig');
     }
 }

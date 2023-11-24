@@ -2,10 +2,16 @@
 
 {% block content %}
 <div class="lw-body-cadeaux">
-<div class="cadeaux">
-    
+    <div class="cadeaux">
+
     <main>
-        
+
+        {% set nbcadeaux = 10 %}
+        {% set cadeau = 'cadeau' %}
+        {% for i in 0..nbcadeaux %}
+            <img src="/assets/images/cadeau.png" class="{{cadeau ~ i}} cadeau" style="left: '.rand(0, 95).'%; animation-delay: '.rand(0, 10).'s;">
+        {% endfor %}
+
         <h1 class="uk-heading-small uk-text-center h1-goddies lw-title-cadeaux"><span class="title-goddies">Envoies ta liste de cadeaux pour le Père Noël</span></h1>
 
         <div class="lw-card-container">
@@ -45,25 +51,25 @@
         </div>
 
         
-        </div>
+    </div>
     </main>
     </div>
     {% endblock %}
 
 
 
-
         {% block javascript %}
-            
-            const myLink = document.getElementById('myLink');
-            const result = document.getElementById('result');
+            {{parent()}}
+                <script>    
+                    const myLink = document.getElementById('myLink');
+                    const result = document.getElementById('result');
 
-            myLink.addEventListener('click', () => {
-                fetch("https://api.chucknorris.io/jokes/random")
-                .then(response => response.json())
-                .then(data => result.innerHTML = data.value)
-                .catch(err => console.error(err))
-            });
-
+                    myLink.addEventListener('click', () => {
+                        fetch("https://api.chucknorris.io/jokes/random")
+                        .then(response => response.json())
+                        .then(data => result.innerHTML = data.value)
+                        .catch(err => console.error(err))
+                    });
+                </script>
        {% endblock %}
 
