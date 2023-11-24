@@ -17,4 +17,7 @@ return [
     'goddies' => ['HomeController', 'indexGoddies',],
     'accueil' => ['HomeController', 'indexAccueil',],
     'visite' => ['HomeController', 'indexVisite',],
+    'connexion' => ['HomeController', 'login',],
+    'logout' => ['HomeController', 'logout',],
+    'admin' => ['HomeController', 'indexAdmin',],
 ];

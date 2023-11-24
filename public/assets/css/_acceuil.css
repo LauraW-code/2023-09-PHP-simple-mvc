@@ -52,6 +52,7 @@ ul {
     max-height: 400px;
 }
 
+<<<<<<< HEAD
 /** Animation cadeaux **/
 .cadeaux {
     position: relative;
@@ -73,3 +74,5 @@ ul {
       transform: translateY(100vh);
     }
   }
+=======
+>>>>>>> 4d3e4c81efca995ac3e5607c3b4f79fa5d9f565c
