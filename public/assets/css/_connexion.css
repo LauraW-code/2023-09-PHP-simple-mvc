@@ -1,14 +1,14 @@
 #myConnexion {
     border: solid white;
-    background-color: var(--vert);
+    background-color: var(--rouge);
     color: white;
-    padding: 1.5rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+    padding: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
     border-radius: 8px;
-    font-size: 2rem;
+    font-size: 1rem;
     cursor: pointer;
-    margin-bottom: 2rem;;
+    margin-bottom: 2rem;
 }
 
 #myConnexion:hover {
@@ -27,5 +27,10 @@
 .lw-connexion-img {
     max-height: 400px;
     border-radius: 15px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
+}
+.connexion-champ {
+    border-radius: 0.5rem;
+    height: 2rem;
+    margin-bottom: 1rem;
 }
