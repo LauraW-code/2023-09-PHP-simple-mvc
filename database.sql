@@ -1,3 +1,4 @@
+USE hackatruite;
 CREATE TABLE hackatruite (
   id INT AUTO_INCREMENT NOT NULL PRIMARY KEY,
   liste VARCHAR(255)
@@ -9,4 +10,4 @@ CREATE TABLE user (
   password VARCHAR(255)
 );
 
-INSERT INTO user VALUES ('hacka', 'thon');
+INSERT INTO user (username,password) VALUES ('hacka', 'thon');
