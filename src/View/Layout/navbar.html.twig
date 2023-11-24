@@ -1,7 +1,3 @@
-<?php
-
-function login()
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -39,6 +35,20 @@ function login()
                         <li>
                             <a href="/cadeaux">Vos listes de voeux</a>
                         </li>
+
+                        {% if session.isLogin == true %}
+                        <li>
+                            <a href="/admin">Admin</a>
+                        </li>
+                        <li>
+                            <a href="/logout">Déconnexion</a>
+                        </li>
+                        {% else %}
+                        <li>
+                            <a href="/connexion">Connexion</a>
+                        </li>
+                        {% endif %}
+
                     </ul>
                     <a class="uk-navbar-toggle uk-navbar-toggle-animate uk-hidden@m" uk-navbar-toggle-icon href="#"></a>
                     <div class="uk-navbar-dropdown uk-navbar-dropdown-bottom uk-hidden@m">

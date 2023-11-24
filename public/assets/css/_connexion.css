@@ -1,0 +1,31 @@
+#myConnexion {
+    border: solid white;
+    background-color: var(--vert);
+    color: white;
+    padding: 1.5rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 8px;
+    font-size: 2rem;
+    cursor: pointer;
+    margin-bottom: 2rem;;
+}
+
+#myConnexion:hover {
+    border: solid var(--vert);
+    background-color: white;
+    color: var(--vert);
+    cursor: pointer;
+}
+
+.connexion-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lw-connexion-img {
+    max-height: 400px;
+    border-radius: 15px;
+    margin-bottom: 2rem;
+}
