@@ -8,6 +8,7 @@ use App\Model\AbstractManager;
 class ConnexionManager extends AbstractManager
 {
     public const TABLE = 'user';
+    public const TABLE2 = 'hackatruite';
 
     public function userLogin(array $users)
     {
@@ -18,5 +19,15 @@ class ConnexionManager extends AbstractManager
         $statement->execute();
 
         return $statement->fetch();
+    }
+
+    public function insert(array $liste, string $fileName): int
+    {
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE2 .
+        " (liste) VALUES  (:liste)");
+        $statement->bindValue(':liste', $fileName, \PDO::PARAM_STR);
+        $statement->execute();
+        return (int)$this->pdo->lastInsertId();
+        //return $statement->execute();
     }
 }
